@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+
+.bg-wrapper{
+    @apply h-screen w-full;
+    background: linear-gradient(180deg, #B0CEE3 0%, rgba(176, 206, 227, 0.00) 100%);
+}
+
+.bg-button{
+    background-image: url('./Assets/Media/button.svg');
+    @apply h-[45px] w-[135px] ;
+}
+
+.bg-input{
+    background-image: url('./Assets/Media/input\ form.svg');
+    @apply h-[65px] w-[285px] ;
+}
+
+.bg-banner{
+    background-image: url('./Assets/Media/banner.svg');
+    @apply h-[200px] w-[275px] ;
+}
+
+.bg-banner,
+.bg-button,
+.bg-input{
+    @apply bg-no-repeat bg-center font-wood
+}
