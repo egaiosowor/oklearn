@@ -30,3 +30,33 @@
 .bg-input{
     @apply bg-no-repeat bg-center font-wood
 }
+
+.module-card{
+    @apply flex flex-col justify-center space-y-6 max-h-[300px] items-center bg-[#FFF] py-8;
+    border-radius: 32px;
+    box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.25);
+}
+
+.grid-container{
+    @apply grid gap-8;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 350px));
+}
+
+.b-s{
+    box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.25);
+}
+
+.left-chevron{
+    background-image: url('./Assets/Media/leftchevron.svg');
+    @apply h-[56px] w-[56px] ;
+}
+
+.right-chevron{
+    background-image: url('./Assets/Media/rightchevron.svg');
+    @apply h-[56px] w-[56px] ;
+}
+
+.speaker{
+    background-image: url('./Assets/Media/speaker.svg');
+    @apply h-[40px] w-[40px] ;
+}

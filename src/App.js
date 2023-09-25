@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import Login from './Pages/Login';
-import ProtectedRoutes from './Utils/ProtectedRoutes'
-import {ModulesProvider} from'./Utils/Context'
+import Module from './Pages/Module';
+import ProtectedRoutes from './Utils/ProtectedRoutes';
+import {ModulesProvider} from'./Utils/Context';
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route element={<ProtectedRoutes />}>
               <Route path='/' element={<Home />} />
+              <Route path='/:moduleName' element={<Module  />} />
             </Route>
           </Routes>
         </Router>

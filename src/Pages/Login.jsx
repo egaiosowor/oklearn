@@ -1,13 +1,15 @@
 import Kids from '../Assets/Media/Kids.svg';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { usernameIsValid } from '../Utils/Validate';
 import { useNavigate } from 'react-router-dom';
 import Banner from '../Components/Banner';
+import Loader from '../Components/Loader';
 
 export default function Login(){
 
     const[username, setUsername] = useState("")
     const[showBanner, setShowBanner] = useState(false)
+    const[isLoading, setIsLoading] = useState(true)
 
     const navigate = useNavigate();
 
@@ -30,6 +32,7 @@ export default function Login(){
     }
 
     return(
+        
         <>
             <div className="px-10 bg-wrapper flex flex-col justify-end items-center" >
                 <div className="space-y-4" >
