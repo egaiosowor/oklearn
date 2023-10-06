@@ -41,7 +41,7 @@ export default function Module() {
   }, [contentData, moduleName])
 
   return (
-    <div className="w-full max-w-lg mx-auto p-4 h-screen">
+    <div className="w-full max-w-lg mx-auto p-4 h-screen overflow-y-hidden">
       <div className="relative">
         <div className="mb-6 b-s rounded-lg p-6 space-y-4">
           <img
@@ -51,7 +51,7 @@ export default function Module() {
           />
           <h2 className="text-lg text-center font-medium" >{ moduleData[currentImageIndex]?.name }</h2>
         </div>
-        <div className="flex justify-center space-x-2">
+        <div className="flex justify-start space-x-2 overflow-y-auto">
           {moduleData?.map((module, index) => (
             <img
               key={index}
@@ -64,6 +64,7 @@ export default function Module() {
           ))}
         </div>
       </div>
+      
       <div className="flex justify-between mt-6">
         <button
           onClick={handlePrevClick}
